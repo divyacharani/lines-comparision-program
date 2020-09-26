@@ -32,12 +32,14 @@ public class LinesComparision {
 		Double lineTwoLength = Math.sqrt((Math.pow(xCoorDiff,2))+(Math.pow(yCoorDiff,2)));
 		System.out.println("Length of Line Two "+lineTwoLength+" units");
 		
-		//Checking of equality of two lines using Java equality method
-		boolean areEqual = lineOneLength.equals(lineTwoLength);
-		if(areEqual)
+		//Comparison of two lines using Java compareTo method
+		int comparedValue = lineOneLength.compareTo(lineTwoLength);
+		if(comparedValue==0)
 			System.out.println("The length of the two lines are equal");
-		else 
-			System.out.println("The length of the two lines are not equal");
+		else if(comparedValue>0)
+			System.out.println("The length of the line one is greater than length of line two");
+		else if(comparedValue<0)
+			System.out.println("The length of the line one is less than length of line two");
 
 		
 	
